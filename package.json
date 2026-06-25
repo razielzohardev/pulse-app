@@ -1,0 +1,31 @@
+{
+  "name": "playwright-pulse",
+  "version": "1.0.0",
+  "description": "Playwright E2E test infrastructure for the Pulse rehab app",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:smoke": "playwright test tests/smoke",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui --project=chromium",
+    "test:ui:slow": "cross-env PWSLOW=800 playwright test --ui --project=chromium",
+    "test:debug": "playwright test --debug",
+    "test:dev": "cross-env TEST_ENV=dev playwright test",
+    "test:testing": "cross-env TEST_ENV=testing playwright test",
+    "test:prod": "cross-env TEST_ENV=prod playwright test",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://pulse-rehab.vercel.app",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "typescript": "^6.0.0"
+  }
+}
