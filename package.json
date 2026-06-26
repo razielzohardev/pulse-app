@@ -27,5 +27,8 @@
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "typescript": "^6.0.0"
+  },
+  "dependencies": {
+    "next": "^16.2.9"
   }
 }
